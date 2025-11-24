@@ -1,3 +1,8 @@
+python -m venv .venvDIOLuizaLabs
+
+source .venvDIOLuizaLabs/bin/activate
+
+
 # FastAPI
 ### Quem é o FastAPi?
 Framework FastAPI, alta performance, fácil de aprender, fácil de codar, pronto para produção.
@@ -23,6 +28,15 @@ A API foi desenvolvida utilizando o `fastapi` (async), junto das seguintes libs:
 Para executar o projeto, utilizei a [pyenv](https://github.com/pyenv/pyenv), com a versão 3.11.4 do `python` para o ambiente virtual.
 
 Caso opte por usar pyenv, após instalar, execute:
+
+```
+No Linux:
+
+    source .venvDIOLuizaLabsLnx/bin/activate
+
+    uvicorn workout_api.main:app --host 127.0.0.1 --port 8080 --reload
+
+```
 
 ```bash
 pyenv virtualenv 3.11.4 workoutapi
@@ -54,22 +68,6 @@ make run
 ```
 e acesse: http://127.0.0.1:8000/docs
 
-# Desafio Final
-    - adicionar query parameters nos endpoints
-        - atleta
-            - nome
-            - cpf
-    - customizar response de retorno de endpoints
-        - get all
-            - atleta
-                - nome
-                - centro_treinamento
-                - categoria
-    - Manipular exceção de integridade dos dados em cada módulo/tabela
-        - sqlalchemy.exc.IntegrityError e devolver a seguinte mensagem: “Já existe um atleta cadastrado com o cpf: x”
-        - status_code: 303
-    - Adicionar paginação utilizando a lib: fastapi-pagination
-        - limit e offset
 # Referências
 
 FastAPI: https://fastapi.tiangolo.com/
